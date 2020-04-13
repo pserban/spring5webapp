@@ -1,6 +1,6 @@
-package guru.spring.framework.spring5webapp.domain;
+package guru.springframework.spring5webapp.domain;
 
-import java.util.set;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -62,7 +62,7 @@ public class Author {
 
     @Override
     public String toString() {
-	return $"Author{" +
+	return "Author{" +
 	    "id=" + id +
 	    ", firstName='" + firstName + '\'' +
 	    ", lastName='" + lastName + '\'' +

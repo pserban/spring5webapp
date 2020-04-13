@@ -1,6 +1,6 @@
 package guru.springframework.spring5webapp.domain;
 
-import java.util.set;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -31,9 +31,9 @@ public class Book {
     }
 
     public Book(String title, String isbn, Set<Author> authors) {
-	this.title = authors;
+	this.title = title;
 	this.isbn = isbn;
-	this authors = authors;
+	this.authors = authors;
     }
 
     public Long getId() {
@@ -61,12 +61,12 @@ public class Book {
     }
 
     public void setAuthors(Set<Author> authors) {
-	thsi.authors = authors;
+	this.authors = authors;
     }
 
     @Override
     public String toString() {
-	return $"Author{" +
+	return "Author{" +
 	    "id=" + id +
 	    ", title='" + title + '\'' +
 	    ", isbn='" + isbn + '\'' +
@@ -80,9 +80,9 @@ public class Book {
 	if (this == o) return true;
 	if (o == null || getClass() != o.getClass()) return false;
 
-	Author author = (Author) o;
+	Book book = (Book) o;
 
-	return id != null ? id.equals(author.id) : author.id == null;
+	return id != null ? id.equals(book.id) : book.id == null;
     }
 
     @Override
